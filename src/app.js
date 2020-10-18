@@ -9,6 +9,16 @@ const taskRouter = require('./resources/tasks/task.router');
 const app = express();
 const swaggerDocument = YAML.load(path.join(__dirname, '../doc/api.yaml'));
 
+const { logger, errorLogger } = require('./logger');
+
+logger(app);
+
+// Uncomment the string below for check "uncaughtException"
+// throw Error('Oops!');
+
+// Uncomment the string below for check "unhandledRejection"
+// Promise.reject(Error('Oops!'));
+
 app.use(express.json());
 
 app.use('/doc', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
@@ -23,7 +33,12 @@ app.use('/', (req, res, next) => {
 
 app.use('/users', userRouter);
 app.use('/boards', boardRouter);
-
 boardRouter.use('/:boardId/tasks', taskRouter);
+
+app.use((err, req, res, next) => {
+  errorLogger(`Internal server error: ${err.message}`);
+  res.status(500).send(err.message);
+  next();
+});
 
 module.exports = app;
