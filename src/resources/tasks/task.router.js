@@ -1,20 +1,11 @@
 const router = require('express').Router({ mergeParams: true });
-const Task = require('./task.model');
+const { toResponse } = require('./task.model');
 const tasksService = require('./task.service');
 
 router.route('/').post(async (req, res, next) => {
   try {
-    const task = await tasksService.create(
-      new Task({
-        title: req.body.title,
-        order: req.body.columns,
-        description: req.body.description,
-        userId: req.body.userId,
-        boardId: req.params.boardId,
-        columnId: req.body.columnId
-      })
-    );
-    res.json(task);
+    const task = await tasksService.create(req.params.boardId, req.body);
+    res.json(toResponse(task));
   } catch (err) {
     return next(err);
   }
@@ -25,6 +16,7 @@ router.route('/:id').delete(async (req, res, next) => {
     await tasksService.deleteTask(req.params.boardId, req.params.id);
     res.status('204').send('The board has been deleted');
   } catch (err) {
+    // res.status('404').send('Not found');
     return next(err);
   }
 });
@@ -33,17 +25,18 @@ router.route('/:id').get(async (req, res, next) => {
   try {
     const task = await tasksService.get(req.params.boardId, req.params.id);
     if (!task) res.status('404');
-    res.json(task);
+    res.json(toResponse(task));
   } catch (err) {
+    // return res.status('404').send('Not found');
     return next(err);
   }
 });
 
 router.route('/').get(async (req, res, next) => {
   try {
-    const tasks = await tasksService.getAll(req.params.boardId);
+    const tasks = await tasksService.getAll();
     if (!tasks) res.status('404');
-    res.json(tasks);
+    res.json(tasks.map(toResponse));
   } catch (err) {
     return next(err);
   }
@@ -56,7 +49,7 @@ router.route('/:id').put(async (req, res, next) => {
       req.params.id,
       req.body
     );
-    res.json(task);
+    res.json(toResponse(task));
   } catch (err) {
     return next(err);
   }

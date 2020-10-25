@@ -1,15 +1,14 @@
-const tasksRepo = require('./task.memory.repository');
+const tasksRepo = require('./task.DB.repository');
 
-const create = async task => tasksRepo.create(task);
+const create = (boardId, task) => tasksRepo.create(boardId, task);
 
-const deleteTask = async (boardId, taskId) =>
-  tasksRepo.deleteTask(boardId, taskId);
+const deleteTask = (boardId, taskId) => tasksRepo.deleteTask(boardId, taskId);
 
-const get = async (boardId, taskId) => tasksRepo.get(boardId, taskId);
+const get = (boardId, taskId) => tasksRepo.get(boardId, taskId);
 
-const getAll = async boardId => tasksRepo.getAll(boardId);
+const getAll = () => tasksRepo.getAll();
 
-const update = async (boardID, taskId, task) =>
+const update = (boardID, taskId, task) =>
   tasksRepo.update(boardID, taskId, task);
 
 module.exports = { create, deleteTask, get, getAll, update };

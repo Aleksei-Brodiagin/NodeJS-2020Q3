@@ -1,3 +1,21 @@
-Internal server error: BROKEN
-Captured error: "Oops!"
-Unhandled rejection detected: "Oops!"
+Internal server error: Cannot destructure property 'id' of 'board' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'board' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'board' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.

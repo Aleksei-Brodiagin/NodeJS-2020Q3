@@ -37,7 +37,7 @@ boardRouter.use('/:boardId/tasks', taskRouter);
 
 app.use((err, req, res, next) => {
   errorLogger(`Internal server error: ${err.message}`);
-  res.status(500).send(err.message);
+  // res.status(500).send(err.message);
   next();
 });
 

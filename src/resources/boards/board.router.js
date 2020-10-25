@@ -1,16 +1,11 @@
 const router = require('express').Router();
-const Board = require('./board.model');
+const { toResponse } = require('./board.model');
 const boardsService = require('./board.service');
 
 router.route('/').post(async (req, res, next) => {
   try {
-    const board = await boardsService.create(
-      new Board({
-        title: req.body.title,
-        columns: req.body.columns
-      })
-    );
-    res.json(board);
+    const board = await boardsService.create(req.body);
+    res.json(toResponse(board));
   } catch (err) {
     return next(err);
   }
@@ -25,20 +20,11 @@ router.route('/:id').delete(async (req, res, next) => {
   }
 });
 
-router.route('/:id').put(async (req, res, next) => {
-  try {
-    const board = await boardsService.update(req.params.id, req.body);
-    res.json(board);
-  } catch (err) {
-    return next(err);
-  }
-});
-
 router.route('/').get(async (req, res, next) => {
   try {
     const boards = await boardsService.getAll();
     if (!boards) res.status('404');
-    res.json(boards);
+    res.json(boards.map(toResponse));
   } catch (err) {
     return next(err);
   }
@@ -48,7 +34,16 @@ router.route('/:id').get(async (req, res, next) => {
   try {
     const board = await boardsService.get(req.params.id);
     if (!board) res.status('404');
-    res.json(board);
+    res.json(toResponse(board));
+  } catch (err) {
+    return next(err);
+  }
+});
+
+router.route('/:id').put(async (req, res, next) => {
+  try {
+    const board = await boardsService.update(req.params.id, req.body);
+    res.json(toResponse(board));
   } catch (err) {
     return next(err);
   }
