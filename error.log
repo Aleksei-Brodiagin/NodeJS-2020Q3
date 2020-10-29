@@ -5,6 +5,14 @@ Internal server error: Cannot destructure property 'id' of 'task' as it is null.
 Internal server error: Cannot destructure property 'id' of 'task' as it is null.
 Internal server error: Cannot destructure property 'id' of 'task' as it is null.
 Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: data and salt arguments required
+Internal server error: data and salt arguments required
+Internal server error: data and salt arguments required
+Internal server error: Cast to ObjectId failed for value "undefined" at path "_id" for model "users"
+Internal server error: data and salt arguments required
+Internal server error: Cast to ObjectId failed for value "undefined" at path "_id" for model "users"
+Internal server error: data and salt arguments required
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
 Internal server error: Cannot destructure property 'id' of 'board' as it is null.
 Internal server error: Cannot destructure property 'id' of 'task' as it is null.
 Internal server error: Cannot destructure property 'id' of 'task' as it is null.
@@ -14,6 +22,36 @@ Internal server error: Cannot destructure property 'id' of 'task' as it is null.
 Internal server error: Cannot destructure property 'id' of 'task' as it is null.
 Internal server error: Cannot destructure property 'id' of 'board' as it is null.
 Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'board' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'board' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'board' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: data and hash arguments required
+Internal server error: data and hash arguments required
+Internal server error: data and hash arguments required
+Internal server error: Cannot destructure property 'id' of 'task' as it is null.
+Internal server error: Cannot destructure property 'id' of 'board' as it is null.
 Internal server error: Cannot destructure property 'id' of 'task' as it is null.
 Internal server error: Cannot destructure property 'id' of 'task' as it is null.
 Internal server error: Cannot destructure property 'id' of 'task' as it is null.
